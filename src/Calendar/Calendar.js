@@ -95,10 +95,14 @@ class Calendar extends Component {
             this.setState({
                 year: ++year,
                 month: 0
+            },()=>{
+                this.setDatePicked();
             })
         } else {
             this.setState({
                 month: ++month
+            },()=>{
+                this.setDatePicked();
             })
         }
     }
@@ -109,10 +113,14 @@ class Calendar extends Component {
             this.setState({
                 year: --year,
                 month: 11
+            },()=>{
+                this.setDatePicked();
             })
         } else {
             this.setState({
                 month: --month
+            },()=>{
+                this.setDatePicked();
             })
         }
     }
@@ -132,10 +140,14 @@ class Calendar extends Component {
             this.prevMonth();
             this.setState({
                 day: perDay
+            },()=>{
+                this.setDatePicked();
             })
         } else {
             this.setState({
                 day: --day
+            },()=>{
+                this.setDatePicked();
             })
         }
     }
@@ -147,10 +159,14 @@ class Calendar extends Component {
             this.nextMonth();
             this.setState({
                 day: 1
+            },()=>{
+                this.setDatePicked();
             });
         } else {
             this.setState({
                 day: ++day
+            },()=>{
+                this.setDatePicked();
             })
         }
     }
